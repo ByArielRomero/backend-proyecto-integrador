@@ -111,6 +111,16 @@ try:
             FOREIGN KEY (id_cuadrante) REFERENCES Cuadrante(id_cuadrante),
             FOREIGN KEY (id_forma) REFERENCES FormaGeometrica(id_forma)
         )
+        """),
+          ("Imputados", """
+        CREATE TABLE IF NOT EXISTS Imputado (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            nombre VARCHAR(50) NOT NULL,
+            dni INT NOT NULL,
+            direccion VARCHAR(100) NOT NULL,
+            comisaria VARCHAR(100) NOT NULL,
+            jurisdiccion VARCHAR(100) NOT NULL
+        )
         """)
     ]
 
